@@ -23,8 +23,8 @@
         {
             "atomType": "Circle",
             "name": "Circle",
-            "x": 0.2759882869692533,
-            "y": 0.5152671755725191,
+            "x": 0.20644216691068812,
+            "y": 0.18702290076335878,
             "uniqueID": 789733,
             "ioValues": [
                 {
@@ -32,6 +32,40 @@
                     "ioValue": 20
                 }
             ]
+        },
+        {
+            "atomType": "Constant",
+            "name": "Minor",
+            "x": 0.10761346998535871,
+            "y": 0.5610687022900763,
+            "uniqueID": 855194,
+            "ioValues": [
+                {
+                    "name": "number",
+                    "ioValue": 5
+                }
+            ],
+            "evolve": false,
+            "min": 0,
+            "max": 20
+        },
+        {
+            "atomType": "Code",
+            "name": "Code",
+            "x": 0.24158125915080525,
+            "y": 0.6221374045801527,
+            "uniqueID": 106429,
+            "ioValues": [
+                {
+                    "name": "majorDiameter",
+                    "ioValue": 50
+                },
+                {
+                    "name": "minorDiameter",
+                    "ioValue": 5
+                }
+            ],
+            "code": "//You can learn more about all of the available methods at https://jsxcad.js.org/app/UserGuide.html \n\n\nfunction main(majorDiameter, minorDiameter){\n  return Arc(majorDiameter).sweep(Arc(minorDiameter));        //return must be geometry;\n}\n\nreturn main(majorDiameter, minorDiameter)"
         },
         {
             "atomType": "Extrude",
@@ -49,6 +83,22 @@
                     "ioValue": 10
                 }
             ]
+        },
+        {
+            "atomType": "Constant",
+            "name": "Major",
+            "x": 0.08784773060029283,
+            "y": 0.8435114503816794,
+            "uniqueID": 472950,
+            "ioValues": [
+                {
+                    "name": "number",
+                    "ioValue": 50
+                }
+            ],
+            "evolve": false,
+            "min": 0,
+            "max": 20
         },
         {
             "atomType": "Output",
@@ -73,11 +123,25 @@
             "ap2ID": 136531
         },
         {
+            "ap1Name": "number",
+            "ap2Name": "minorDiameter",
+            "ap2Primary": false,
+            "ap1ID": 855194,
+            "ap2ID": 106429
+        },
+        {
             "ap1Name": "geometry",
             "ap2Name": "number or geometry",
             "ap2Primary": false,
             "ap1ID": 136531,
             "ap2ID": 883582
+        },
+        {
+            "ap1Name": "number",
+            "ap2Name": "majorDiameter",
+            "ap2Primary": false,
+            "ap1ID": 472950,
+            "ap2ID": 106429
         }
     ],
     "fileTypeVersion": 1,
